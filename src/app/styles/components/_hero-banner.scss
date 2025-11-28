@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as *;
+
+.hero-banner__wrapper {
+    padding-block-end: $spacing-1200;
+    max-width: 1192px;
+    margin: 0 auto;
+}
+
+.hero-banner__title {
+    margin-block-end: $spacing-150;
+}
+
+.hero-banner__description {
+    margin-block-end: $spacing-500;
+}
+
+.hero-banner__btn {
+    margin-block-end: $spacing-1000;
+}

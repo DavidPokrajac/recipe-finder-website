@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as *;
+
+.cta-banner {
+    max-width: 1192px;
+    margin: 0 auto;
+    padding-block: $spacing-1200;
+    border-radius: $radius-16;
+    background-color: $clr-neutral-200;
+    background-image: url("../../../../public/assets/images/pattern-fork.svg"), url("../../../../public/assets/images/pattern-knife.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: -73px 23px, 924px 24px;
+    background-size: contain, contain;
+}
+
+.cta-banner__title {
+    margin-block-end: $spacing-150;
+}
+
+.cta-banner__btn {
+    margin-block-start: $spacing-500;
+}

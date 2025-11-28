@@ -1,0 +1,14 @@
+@use "../abstracts/_variables" as *;
+
+.footer {
+    max-width: 1192px;
+    margin: 0 auto;
+    display: flex;
+    padding-block: $spacing-500;
+}
+
+.footer_links {
+    margin-left: auto;
+    display: flex;
+    gap: $spacing-300;
+}

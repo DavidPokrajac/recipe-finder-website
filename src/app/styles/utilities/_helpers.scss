@@ -1,0 +1,18 @@
+@use "../abstracts/variables" as *;
+
+.img-with-white-wrapper {
+    width: 60px;
+    height: 60px;
+    background-color: $clr-neutral-0;
+    align-content: center;
+    border-radius: $radius-12;
+    padding: $spacing-050 $spacing-100;
+}
+
+.margin-center {
+    margin: 0 auto;
+}
+
+.large {
+    padding: $spacing-200 $spacing-400;
+}

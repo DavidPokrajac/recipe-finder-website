@@ -1,0 +1,5 @@
+@use "../abstracts/_mixins" as *;
+
+.main-btn {
+    @include btn-dark;
+}

@@ -1,0 +1,15 @@
+@use "../abstracts/variables" as *;
+
+.features-section-title {
+    margin-block-end: $spacing-600;
+}
+
+.features-banner__wrapper {
+    max-width: 1192px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-400;
+    text-align: start;
+    padding-bottom: $spacing-1200;
+}

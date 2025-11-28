@@ -1,0 +1,8 @@
+@use "./variables" as *;
+
+@mixin btn-dark {
+    background-color: $clr-neutral-900;
+    color: $clr-neutral-0;
+    padding: $spacing-150 $spacing-200;
+    border-radius: $radius-10;
+}

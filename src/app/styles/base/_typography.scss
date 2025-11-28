@@ -1,0 +1,96 @@
+@font-face {
+    font-family: "NunitoFF";
+    src: url("../../../../public/assets/fonts/Nunito/Nunito-VariableFont_wght.ttf") format("woff2-variations");
+}
+
+@font-face {
+    font-family: "NunitoSansFF";
+    src: url("../../../../public/assets/fonts/Nunito_Sans/NunitoSans-Italic-VariableFont_YTLC\,opsz\,wdth\,wght.ttf") format("woff2-variations");
+}
+
+$nunito-ff: "Nunito", sans-serif;
+$nunito-sans-ff: "Nunito Sans", sans-serif;
+
+.text-xs {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+    font-weight: 800;
+}
+
+.text-regular {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+}
+
+.text-regular-bold {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+    font-weight: 800;
+}
+
+.text-large-semibold {
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+    font-weight: 500;
+}
+
+.text-2xl {
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+}
+
+.text-2xl-bold {
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+    font-weight: 800;
+}
+
+.text-3xl-bold {
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: -1px;
+    font-weight: 800;
+}
+
+.text-4xl-bold {
+    font-size: 32px;
+    line-height: 1.3;
+    letter-spacing: -1px;
+    font-weight: 800;
+}
+
+.text-5xl {
+    font-size: 40px;
+    line-height: 1.2;
+    letter-spacing: -2px;
+}
+
+.text-6xl {
+    font-size: 48px;
+    line-height: 1.2;
+    letter-spacing: -2px;
+}
+
+.text-largest-dt {
+    font-size: 72px;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.text-largest-tb {
+    font-size: 64px;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+.text-largest-mb {
+    font-size: 52px;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}

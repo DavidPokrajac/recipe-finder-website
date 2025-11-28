@@ -1,0 +1,22 @@
+@use "../abstracts/variables" as *;
+
+.info-banner {
+    max-width: 1192px;
+    margin: 0 auto;
+}
+
+.info-banner__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: $spacing-600;
+    padding-block: $spacing-1200;
+}
+
+.info-banner__text {
+    text-align: start;
+}
+
+.info-banner__image {
+    border-radius: $radius-10;
+}
