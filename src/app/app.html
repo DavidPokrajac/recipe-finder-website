@@ -2,84 +2,34 @@
   <img src="assets/images/logo.svg" alt="">
   <nav class="header__navigation">
     <ul class="header__navigation__nav-items-list">
-      <li><a href="#" class="header__navigation__nav-link">Home</a></li>
-      <li><a href="#" class="header__navigation__nav-link">About</a></li>
-      <li><a href="#" class="header__navigation__nav-link">Recipes</a></li>
+      <li><a routerLink="/" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact:
+true}" class="header__navigation__nav-link">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active-route" class="header__navigation__nav-link">About</a></li>
+      <li><a routerLink="/recipes" routerLinkActive="active-route" class="header__navigation__nav-link">Recipes</a></li>
     </ul>
   </nav>
   <button class="main-btn">Browse recipes</button>
 </header>
-<main>
-<section class="hero-banner">
-  <div class="hero-banner__wrapper">
-    <h1 class="hero-banner__title text-largest-dt">Healthy meals, zero fuss</h1>
-    <p class="hero-banner__description">Discover eight quick, whole-food recipes that you can cook tonight—no processed junk, no guesswork.</p>
-    <button class="hero-banner__btn main-btn large">Start exploring</button>
-    <img src="assets/images/image-home-hero-large.webp" alt="" />
-  </div>
-</section>
-<section class="features-banner padding-bottom">
-<h2 class="features-section-title">What you'll get</h2>
-<div class="features-banner__wrapper">
-<div>
-  <div class="img-with-white-wrapper">
-    <img src="assets/images/icon-whole-food-recipes.svg" alt="" class="margin-center" />
-  </div>
-  <h3>Whole-food recipes</h3>
-  <p>Each dish uses everyday, unprocessed ingredients.</p>
-</div>
-<div>
-  <div class="img-with-white-wrapper">
-    <img src="assets/images/icon-minimum-fuss.svg" alt="" class="margin-center" />
-  </div>
-  <h3>Minimum fuss</h3>
-  <p>All recipes are designed to make eating healthy quick and easy.</p>
-</div>
-<div>
-  <div class="img-with-white-wrapper">
-    <img src="assets/images/icon-search-in-seconds.svg" alt="" class="margin-center" />
-  </div>
-  <h3>Search in seconds</h3>
-  <p>Filter by name or ingredient and jump straight to the recipe you need.</p>
-</div>
-</div>
-</section>
-<section class="info-banner">
-  <div class="info-banner__wrapper">
-  <div class="info-banner__text">
-    <h2>Built for real life</h2>
-    <p>Cooking shouldn't be complicated. These recipes come in under 30 minutes of active time, fit busy schedules, and taste good enough to repeat.
-    </p>
-    <p>Whether you're new to the kitchen or just need fresh ideas, we've got you covered.
-    </p>
-  </div>
-  <img src="assets/images/image-home-real-life-large.webp" alt="" class="info-banner__image" />
-  </div>
-</section>
-<section class="cta-banner">
-  <h2 class="cta-banner__title">Ready to cook smarter?</h2>
-  <p>Hit the button, pick a recipe, and get dinner on the table—fast.</p>
-  <button class="cta-banner__btn main-btn">Browse recipes</button>
-</section>
-</main>
-<footer class="footer">
-  <p>Made with ❤️ and 🥑</p>
-  <ul class="footer_links">
-    <li>
-      <a href="#">
-        <img src="assets/images/icon-instagram.svg" alt="" />
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <img src="assets/images/icon-bluesky.svg" alt="" />
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <img src="assets/images/icon-tiktok.svg" alt="" />
-      </a>
-    </li>
-  </ul>
-</footer>
 <router-outlet />
+<footer class="footer">
+  <div class="footer-wrapper">
+    <p>Made with ❤️ and 🥑</p>
+    <ul class="footer_links">
+      <li>
+        <a href="#">
+          <img src="assets/images/icon-instagram.svg" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/images/icon-bluesky.svg" alt="" />
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="assets/images/icon-tiktok.svg" alt="" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>

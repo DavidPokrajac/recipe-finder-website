@@ -1,0 +1,58 @@
+<main>
+  <section class="recipes-intro-banner">
+    <h1>Explore our simple, healthy recipes</h1>
+    <p>
+      Discover eight quick, whole-food dishes that fit real-life 
+      schedules and taste amazing. Use the search bar to find a 
+      recipe by name or ingredient, or simply scroll the list and 
+      let something delicious catch your eye.
+    </p>
+  </section>
+  <section class="sorting-section">
+    <button id="max-prep-btn" class="popover-btn" popovertarget="max-prep-popover" popovertargetaction="show">Max Prep Time <img src="assets/images/icon-chevron-down.svg" alt=""></button>
+    <div popover id="max-prep-popover">
+      <label for="zero-mins">
+        <input type="radio" name="max-prep-time" id="zero-mins">
+        0 minutes
+      </label>
+      <label for="five-mins">
+        <input type="radio" name="max-prep-time" id="five-mins">
+        5 minutes
+      </label>
+      <label for="ten-mins">
+        <input type="radio" name="max-prep-time" id="ten-mins">
+        10 minutes
+      </label>
+      <button (click)="clearMaxPrepRadios()">Clear</button>
+    </div>
+    <button id="max-cook-btn" class="popover-btn" popovertarget="max-cook-popover" popovertargetaction="show">Max Cook Time <img src="assets/images/icon-chevron-down.svg" alt=""></button>
+    <div popover id="max-cook-popover">
+      <label for="zero-mins">
+        <input type="radio" name="max-cook-time" id="zero-mins">
+        0 minutes
+      </label>
+      <label for="five-mins">
+        <input type="radio" name="max-cook-time" id="five-mins">
+        5 minutes
+      </label>
+      <label for="ten-mins">
+        <input type="radio" name="max-cook-time" id="ten-mins">
+        10 minutes
+      </label>
+      <label for="fifteen-mins">
+        <input type="radio" name="max-cook-time" id="fifteen-mins">
+        15 minutes
+      </label>
+      <label for="twenty-mins">
+        <input type="radio" name="max-cook-time" id="twenty-mins">
+        20 minutes
+      </label>
+      <button (click)="clearMaxCookRadios()">Clear</button>
+    </div>
+    <div class="search-container">
+      <img src="assets/images/icon-search.svg" alt="" class="search-icon">
+      <input type="search" placeholder="Search by name or ingredient..." />
+    </div>
+  </section>
+  <app-recipes-list></app-recipes-list>
+</main>

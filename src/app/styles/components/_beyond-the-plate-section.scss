@@ -1,0 +1,11 @@
+@use "../abstracts/variables" as *;
+
+.beyond-the-plate-section {
+    max-width: 1192px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 376px 1fr;
+    gap: 64px;
+    padding-block: $spacing-1200;
+    text-align: start;
+}

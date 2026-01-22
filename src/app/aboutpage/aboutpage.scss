@@ -1,0 +1,44 @@
+.why-we-exist ul,
+.food-philosophy ul {
+    list-style-type:lower-greek;
+}
+
+.beyond-the-plate-section {
+    align-items: center;
+}
+
+h1 {
+    font-size: 48px;
+    letter-spacing: -2px;
+    line-height: 1.2;
+}
+
+.about-intro-banner__img {
+    width: 618px;
+}
+
+h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.highway {
+    display: flex;
+    align-items: flex-start;
+}
+
+.text-highlight {
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}

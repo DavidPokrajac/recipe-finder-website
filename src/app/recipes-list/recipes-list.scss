@@ -1,0 +1,6 @@
+.recipes-list {
+    display: grid;
+    grid-template-columns: repeat(3, 376px);
+    gap: 32px;
+    margin-block-start: 24px;
+}

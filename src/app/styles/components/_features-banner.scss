@@ -2,6 +2,9 @@
 
 .features-section-title {
     margin-block-end: $spacing-600;
+    font-size: 48px;
+    line-height: 1.2;
+    letter-spacing: -2px;
 }
 
 .features-banner__wrapper {
@@ -12,4 +15,18 @@
     gap: $spacing-400;
     text-align: start;
     padding-bottom: $spacing-1200;
+}
+
+.features-banner__wrapper h3 {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.3;
+    letter-spacing: -1px;
+}
+
+.features-banner__wrapper p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
 }

@@ -1,0 +1,14 @@
+@use "../abstracts/variables" as *;
+
+.text-content-section {
+    max-width: 1192px;
+    margin: 0 auto;
+    display: flex;
+    gap: $spacing-800;
+    padding-block: $spacing-1200;
+    text-align: start;
+}
+
+.text-content-section > * {
+    width: 100%;
+}

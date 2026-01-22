@@ -16,3 +16,10 @@
     justify-content: center;
     gap: 40px;
 }
+
+.header__navigation__nav-link {
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+    color: $clr-neutral-900;
+}

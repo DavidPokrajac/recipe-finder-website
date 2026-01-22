@@ -1,6 +1,11 @@
 @use "../abstracts/_variables" as *;
 
 .footer {
+    margin-block-start: 96px;
+    border-block-start: 1px solid $clr-neutral-300;
+}
+
+.footer-wrapper {
     max-width: 1192px;
     margin: 0 auto;
     display: flex;

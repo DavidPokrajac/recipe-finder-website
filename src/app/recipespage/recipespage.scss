@@ -1,0 +1,132 @@
+main {
+    max-width: 1192px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.recipes-intro-banner {
+    max-width: 1192px;
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 80px;
+    margin-block-end: 64px;
+}
+
+.sorting-section {
+    display: flex;
+    gap: 16px;
+}
+
+.popover-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: 1px solid rgb(208, 220, 217);
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+}
+
+.popover-btn:first-of-type {
+    grid-column: 1 / span 2;
+}
+
+.popover-btn:last-of-type {
+    grid-column: 3 / span 2;
+}
+
+.search-container {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(208, 220, 217);
+    border-radius: 10px;
+    padding: 10px 16px;
+    display: flex;
+    gap: 8px;
+    width: 310px;
+    margin-inline-start: auto;
+}
+
+.search-icon {
+    width: 20px;
+    aspect-ratio: 1 / 1;
+}
+
+input[type="search"] {
+    /* display: inline-block; */
+    /* width: 310px; */
+    /* padding: 10px 16px; */
+    border: none;
+    flex-grow: 1;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+}
+
+input[type="search"]::placeholder {
+    color: rgb(98, 94, 90);
+}
+
+#max-prep-btn {
+    anchor-name: --prep-anchor;
+}
+
+#max-cook-btn {
+    anchor-name: --cook-anchor;
+}
+
+#max-prep-popover,
+#max-cook-popover {
+    position: absolute;
+    margin: 0;
+    /* display: flex;
+    flex-direction: column;
+    align-items: start; */
+    padding: 8px;
+    border: 1px solid rgb(208, 220, 217);
+    border-radius: 8px;
+    width: 240px;
+    box-shadow: 0 12px 22px -12px rgb(208, 220, 217);
+}
+
+#max-prep-popover {
+    position-anchor: --prep-anchor;
+    left: anchor(left);
+    top: calc(anchor(bottom) + 8px);
+}
+
+#max-cook-popover {
+    position-anchor: --cook-anchor;
+    left: anchor(left);
+    top: calc(anchor(bottom) + 8px);
+}
+
+div[popover] > * {
+    padding: 8px;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+    display: block;
+    text-align: start;
+}
+
+div[popover] > button {
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+    padding-block: 2px;
+}
+
+input[type="radio"] {
+    margin: 0 8px 0 0;
+    accent-color: rgb(22, 58, 52);
+    transform: scale(1.143);
+    border: 2px solid rgb(22, 58, 52);
+}

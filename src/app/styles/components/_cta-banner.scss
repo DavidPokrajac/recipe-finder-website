@@ -3,6 +3,7 @@
 .cta-banner {
     max-width: 1192px;
     margin: 0 auto;
+    text-align: center;
     padding-block: $spacing-1200;
     border-radius: $radius-16;
     background-color: $clr-neutral-200;
@@ -14,8 +15,17 @@
 
 .cta-banner__title {
     margin-block-end: $spacing-150;
+    font-size: 48px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
 }
 
 .cta-banner__btn {
     margin-block-start: $spacing-500;
+    font-size: 18px;
+    padding: 16px 24px;
 }

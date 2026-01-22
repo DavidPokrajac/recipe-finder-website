@@ -1,0 +1,7 @@
+<ul class="recipes-list">
+    @for (recipe of recipes; track recipe.title) {
+        <li>
+            <app-recipe-card [recipe]="recipe"></app-recipe-card>
+        </li>
+    }
+</ul>

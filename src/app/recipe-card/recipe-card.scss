@@ -1,0 +1,62 @@
+article {
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    border-radius: 10px;
+    text-align: start;
+    height: 100%;
+    border: 1px solid rgb(208, 220, 217);
+    box-shadow: 0 8px 16px -9px rgba(22, 58, 52, 0.16);
+}
+
+img {
+    border-radius: 10px;
+}
+
+.text-content {
+    padding-inline: 8px;
+}
+
+h2 {
+    font-size: 20px;
+    color: rgb(22, 58, 52);
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: clip;
+}
+
+p {
+    color: rgb(57, 88, 82);
+}
+
+.prep-details {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 8px;
+    margin-block-start: 16px;
+    color: rgb(22, 58, 52);
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: sub;
+    margin-inline-end: 6px;
+}
+
+a {
+    display: block;
+    width: 100%;
+    padding: 12px 32px;
+    border-radius: 100vw;
+    margin-block-start: 16px;
+    background-color: rgb(22, 58, 52);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.recipe-card-image {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}

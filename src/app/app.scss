@@ -1,0 +1,14 @@
+.active-route {
+    position: relative;
+}
+
+.active-route::before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    border-radius: 4px;
+    background-color: rgb(254, 159, 107);
+    position: absolute;
+    top: 100%;
+}
