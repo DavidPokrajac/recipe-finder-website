@@ -3,10 +3,21 @@
 .text-content-section {
     max-width: 1192px;
     margin: 0 auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     gap: $spacing-800;
     padding-block: $spacing-1200;
     text-align: start;
+
+    @media (max-width: 1024px) {
+        padding-block: 80px;
+        grid-template-columns: 100%;
+        gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+        padding-block: 48px;
+    }
 }
 
 .text-content-section > * {

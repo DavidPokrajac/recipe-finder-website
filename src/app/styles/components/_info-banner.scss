@@ -11,16 +11,35 @@
     align-items: center;
     gap: $spacing-600;
     padding-block: $spacing-1200;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 100%;
+        padding-block: 80px 0;
+        gap: 40px;
+    }
+
+    @media (max-width: 768px) {
+        padding-block: 64px 0;
+        gap: 32px;
+    }
 }
 
 .info-banner__text {
     text-align: start;
-    font-size: 20px;
+    font-size: 20px !important;
 }
 
 .info-banner__text h2 {
     font-size: 48px;
     letter-spacing: -0.3px;
+    font-weight: 800;
+
+    @media (max-width: 768px) {
+        margin: 0;
+        font-size: 40px;
+        line-height: 1.2;
+        letter-spacing: -2px;
+    }
 }
 
 .info-banner__image {

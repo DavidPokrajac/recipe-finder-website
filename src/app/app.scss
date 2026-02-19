@@ -12,3 +12,63 @@
     position: absolute;
     top: 100%;
 }
+
+.header__navigation,
+.browse {
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.hamburger-btn {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    border-radius: 4px;
+    anchor-name: --hamburger-button;
+
+    @media (max-width: 1024px) {
+        display: inline-block;
+    }
+}
+
+.hamburger-btn img {
+    border-radius: 0px;
+    margin: 0 auto;
+}
+
+#my-popover {
+    position: absolute;
+    position-anchor: --hamburger-button;
+    top: calc(anchor(100%) + 12px);
+    width: calc(100% - 32px);
+    margin: 0 auto;
+}
+
+.header__navigation__popover {
+    border: 1px solid #E0E6E3;
+    border-radius: 8px;
+    box-shadow: 0 12px 22px -12px rgba(57, 88, 82, 0.3);
+    padding: 8px;
+}
+
+.header__navigation__popover .header__navigation__nav-items-list {
+    display: flex;
+    flex-direction: column;
+    margin-block: 0;
+    gap: 0;
+}
+
+.header__navigation__nav-items-list li {
+    padding: 12px 8px;
+}
+
+.close-popover-btn {
+    display: block;
+    width: 100%;
+    margin-block-start: 10px;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+}

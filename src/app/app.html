@@ -4,11 +4,27 @@
     <ul class="header__navigation__nav-items-list">
       <li><a routerLink="/" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact:
 true}" class="header__navigation__nav-link">Home</a></li>
-      <li><a routerLink="/about" routerLinkActive="active-route" class="header__navigation__nav-link">About</a></li>
-      <li><a routerLink="/recipes" routerLinkActive="active-route" class="header__navigation__nav-link">Recipes</a></li>
+      <li><a routerLink="/about" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact:
+true}" class="header__navigation__nav-link">About</a></li>
+      <li><a routerLink="/recipes" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact:
+true}" class="header__navigation__nav-link">Recipes</a></li>
     </ul>
   </nav>
-  <button class="main-btn">Browse recipes</button>
+  <button class="main-btn browse">Browse recipes</button>
+  <button href="#" class="hamburger-btn" popovertarget="my-popover">
+    <img src="assets/images/icon-hamburger-menu.svg" alt="" />
+  </button>
+  <div id="my-popover" class="header__navigation__popover" popover>
+    <ul class="header__navigation__nav-items-list">
+      <li><a routerLink="/" routerLinkActive="active-route" popovertargetaction="hide" [routerLinkActiveOptions]="{exact:
+true}" class="header__navigation__nav-link">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active-route" popovertargetaction="hide" [routerLinkActiveOptions]="{exact:
+true}" class="header__navigation__nav-link">About</a></li>
+      <li><a routerLink="/recipes" routerLinkActive="active-route" popovertargetaction="hide" [routerLinkActiveOptions]="{exact:
+true}" class="header__navigation__nav-link">Recipes</a></li>
+    </ul>
+    <button class="main-btn close-popover-btn">Browse recipes</button>
+  </div>
 </header>
 <router-outlet />
 <footer class="footer">

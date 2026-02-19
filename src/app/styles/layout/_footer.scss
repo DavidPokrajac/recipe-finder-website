@@ -1,8 +1,13 @@
 @use "../abstracts/_variables" as *;
 
 .footer {
-    margin-block-start: 96px;
-    border-block-start: 1px solid $clr-neutral-300;
+    /* margin-block-start: 96px; */
+    /* border-block-start: 1px solid $clr-neutral-300; */
+ 
+    @media (max-width: 1024px) {
+        margin-block-start: 0;
+        border-block-start: none;
+    }
 }
 
 .footer-wrapper {
@@ -10,10 +15,43 @@
     margin: 0 auto;
     display: flex;
     padding-block: $spacing-500;
+
+    @media (max-width: 1024px) {
+        padding: 40px 32px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 32px 16px 20px 16px;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+}
+
+.footer-wrapper > * {
+    margin-block: 0;
+}
+
+.footer p {
+    @media(max-width: 768px) {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: -0.3px;
+    }
 }
 
 .footer_links {
     margin-left: auto;
     display: flex;
     gap: $spacing-300;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        order: -1;
+        margin: 0;
+    }
+}
+
+.footer_links img {
+    border-radius: 0;
 }

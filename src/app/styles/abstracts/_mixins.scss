@@ -5,4 +5,15 @@
     color: $clr-neutral-0;
     padding: $spacing-150 $spacing-200;
     border-radius: $radius-10;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $clr-neutral-600;
+    }
+
+    &:focus-visible {
+        background-color: $clr-neutral-900;
+        box-shadow: 0 0 0 3px $clr-neutral-0, 0 0 0 5px $clr-neutral-900;
+        outline: none;
+    }
 }

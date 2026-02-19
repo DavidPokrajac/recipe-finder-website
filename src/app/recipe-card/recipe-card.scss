@@ -16,6 +16,12 @@ img {
     padding-inline: 8px;
 }
 
+.text-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.3px;
+}
+
 h2 {
     font-size: 20px;
     color: rgb(22, 58, 52);
@@ -53,6 +59,7 @@ a {
     background-color: rgb(22, 58, 52);
     color: rgb(255, 255, 255);
     text-align: center;
+    cursor: pointer;
 }
 
 .recipe-card-image {

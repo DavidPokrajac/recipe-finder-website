@@ -9,13 +9,15 @@
   fancy equipment, no ultra-processed shortcuts—just honest 
   ingredients and straightforward steps.</p>
     </div>
-    <img src="assets/images/image-about-our-mission-large.webp" alt="" class="about-intro-banner__img" />
+    <picture>
+      <source [srcset]="'assets/images/image-about-our-mission-small.webp'" media="(max-width: 768px)">
+      <img src="assets/images/image-about-our-mission-large.webp" alt="" class="about-intro-banner__img" />
+    </picture>
   </section>
   <section class="text-content-section why-we-exist">
     <h2>Why we exist</h2>
     <div class="wrapper">
       <div class="highway">
-        <img src="assets/images/icon-bullet-point.svg" alt="" />
         <div>
           <h3>Cut through the noise.</h3>
           <p>
@@ -27,7 +29,6 @@
         </div>
       </div>
       <div class="highway">
-        <img src="assets/images/icon-bullet-point.svg" alt="" />
         <div>
           <h3>Empower home kitchens.</h3>
           <p>
@@ -38,7 +39,6 @@
         </div>
       </div>
       <div class="highway">
-        <img src="assets/images/icon-bullet-point.svg" alt="" />
         <div>
           <h3>Make healthy look good.</h3>
           <p>
@@ -51,7 +51,7 @@
   </section>
   <section class="text-content-section food-philosophy">
     <h2>Our food philosophy</h2>
-    <div>
+    <div class="wrapper">
       <div>
         <h3>Whole ingredients first.</h3>
         <p>

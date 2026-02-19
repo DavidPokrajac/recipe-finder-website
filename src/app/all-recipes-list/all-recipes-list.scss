@@ -1,0 +1,25 @@
+.recipes-list {
+    display: grid;
+    grid-template-columns: repeat(3, 376px);
+    gap: 32px;
+    margin-block-start: 24px;
+    justify-content: center;
+}
+
+@media(max-width: 1200px) {
+    .recipes-list {
+        grid-template-columns: repeat(2, 376px);
+    }
+}
+
+@media(max-width: 1024px) {
+    .recipes-list {
+        grid-template-columns: 100%;
+    }
+}
+
+@media(max-width: 1024px) {
+    .recipes-list {
+        margin-block-end: 0;
+    }
+}

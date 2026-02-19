@@ -1,10 +1,13 @@
 <main>
 <section class="hero-banner">
   <div class="hero-banner__wrapper">
-    <h1 class="hero-banner__title text-largest-dt"><span class="decoration">Healthy</span> meals, zero fuss</h1>
+    <h1 class="hero-banner__title"><span class="decoration">Healthy</span> meals, zero fuss</h1>
     <p class="hero-banner__description">Discover eight quick, whole-food recipes that you can cook tonight—no processed junk, no guesswork.</p>
     <button class="hero-banner__btn main-btn large">Start exploring</button>
-    <img src="assets/images/image-home-hero-large.webp" alt="" />
+    <picture>
+      <source srcset="assets/images/image-home-hero-small.webp" media="max-width: 1024px;">
+      <img src="assets/images/image-home-hero-large.webp" alt="" />
+    </picture>
   </div>
 </section>
 <section class="features-banner padding-bottom">
@@ -42,7 +45,10 @@
     <p>Whether you're new to the kitchen or just need fresh ideas, we've got you covered.
     </p>
   </div>
-  <img src="assets/images/image-home-real-life-large.webp" alt="" class="info-banner__image" />
+  <picture>
+    <source [srcset]="'assets/images/image-home-real-life-small.webp'" media="(max-width: 1024px)">
+    <img src="assets/images/image-home-real-life-large.webp" alt="" class="info-banner__image" />
+  </picture>
   </div>
 </section>
 <section class="cta-banner">

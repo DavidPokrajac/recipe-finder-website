@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import { Component, inject, Input, model } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-card',
-  imports: [RouterLink, RouterModule],
+  imports: [RouterModule],
   templateUrl: './recipe-card.html',
   styleUrl: './recipe-card.scss',
 })
@@ -19,5 +20,11 @@ export class RecipeCard {
     servings: 0,
     prepMinutes: 0,
     cookMinutes: 0
+  }
+
+  private router = inject(Router);
+
+  navigate(id:any) {
+    this.router.navigate(['/recipes', id]);
   }
 }

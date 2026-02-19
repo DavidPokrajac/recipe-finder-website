@@ -1,24 +1,67 @@
 main {
     max-width: 1192px;
     margin: 0 auto;
+    /* padding-inline: 124px; */
+    overflow: clip;
+    border-bottom: 1px solid rgb(208, 220, 217);
+
+    @media (max-width: 1024px) {
+        padding-inline: 32px;
+    }
+
+    @media (max-width: 768px) {
+        padding-inline: 16px;
+    }
 }
 
 h1 {
     font-size: 48px;
+    font-weight: 800;
     margin: 0;
+    line-height: 1.2;
+    letter-spacing: -2px;
+
+    @media (max-width: 768px) {
+        font-size: 40px;
+    }
+}
+
+p {
+    margin: 0;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+        letter-spacing: -0.4px;
+        line-height: 1.5;
+    }
 }
 
 .recipes-intro-banner {
-    max-width: 1192px;
+    /* max-width: 1192px; */
     display: flex;
     flex-direction: column;
     margin-block-start: 80px;
     margin-block-end: 64px;
+    gap: 12px;
+
+    @media (max-width: 1024px) {
+        text-align: start;
+    }
+
+    @media (max-width: 768px) {
+        margin-block: 48px;
+        gap: 12px;
+    }
 }
 
 .sorting-section {
     display: flex;
     gap: 16px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 12px;
+    }
 }
 
 .popover-btn {
@@ -27,11 +70,27 @@ h1 {
     gap: 8px;
     padding: 10px 16px;
     background-color: rgb(255, 255, 255);
+    color: rgb(22, 58, 52);
     border-radius: 10px;
     border: 1px solid rgb(208, 220, 217);
     font-size: 18px;
     line-height: 1.5;
     letter-spacing: -0.3px;
+    cursor: pointer;
+
+    @media(max-width: 768px) {
+        justify-content: center;
+    }
+}
+
+.popover-btn:hover:not(:focus-within) {
+    border-color: currentColor;
+}
+
+.popover-btn:focus-within {
+    box-shadow: 0 0 0 2px rgb(255, 255, 255), 0 0 0 4px rgb(22, 58, 52);
+    outline: none;
+    border-color: none;
 }
 
 .popover-btn:first-of-type {
@@ -51,6 +110,22 @@ h1 {
     gap: 8px;
     width: 310px;
     margin-inline-start: auto;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+        margin-inline-start: 0;
+        width: 100%;
+    }
+}
+
+.search-container:hover:not(:focus-within) {
+    border-color: rgb(22, 58, 52);
+}
+
+.search-container:focus-within {
+    box-shadow: 0 0 0 2px rgb(255, 255, 255), 0 0 0 4px rgb(22, 58, 52);
+    outline: none;
+    border-color: none;
 }
 
 .search-icon {
@@ -67,10 +142,16 @@ input[type="search"] {
     font-size: 18px;
     line-height: 1.5;
     letter-spacing: -0.3px;
+    color: rgb(22, 58, 52);
+    cursor: inherit;
+}
+
+input[type="search"]:focus-visible {
+    outline: none;
 }
 
 input[type="search"]::placeholder {
-    color: rgb(98, 94, 90);
+    color: rgba(22, 58, 52, 0.7);
 }
 
 #max-prep-btn {
@@ -127,6 +208,37 @@ div[popover] > button {
 input[type="radio"] {
     margin: 0 8px 0 0;
     accent-color: rgb(22, 58, 52);
-    transform: scale(1.143);
-    border: 2px solid rgb(22, 58, 52);
+    /* transform: scale(1.143); */
+    /* border: 2px solid rgb(22, 58, 52); */
+    display: inline-block;
+    width: 16px;
+    height: 16px;
 }
+
+label {
+    position: relative;
+}
+
+/* label::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border-radius: 100%;
+    position: absolute;
+    top: 12px;
+    border: 1px solid rgb(208, 220, 217);
+    z-index: 2;
+    box-shadow: 0 1px 2px 0 rgba(22, 58, 52, 0.12);
+    cursor: pointer;
+} */
+
+/* label:hover::before {
+    border: 1px solid #e9ede8;
+}
+
+label:focus-visible::before {
+    outline: none;
+    border: 1px solid rgb(208, 220, 217);
+    box-shadow: 0 0 0 2px rgb(255, 255, 255), 0 0 0 4px #e9ede8;
+} */

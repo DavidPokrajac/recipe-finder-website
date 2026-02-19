@@ -8,6 +8,17 @@
     gap: $spacing-800;
     text-align: start;
     padding-block: $spacing-1000 $spacing-1200;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        padding-block: 0 80px;
+        gap: 64px;
+    }
+
+    @media (max-width: 768px) {
+        padding-block: 0 64px;
+        gap: 40px;
+    }
 }
 
 .about-intro-banner > div {

@@ -1,4 +1,185 @@
-img[src*="image-home-hero-large"] {
+/* @use "../abstracts/variables" as *; */
+
+img[src*="image-home-hero"] {
     border-radius: 12px;
     box-shadow: 0 0 0 12px rgb(255, 255, 255);
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+
+    @media (max-width: 768px) {
+        box-shadow: 0 0 0 3.45px rgb(255, 255, 255);
+        border-radius: 3.45px;
+        opacity: 0.9;
+    }
+}
+
+.decoration {
+    position: relative;
+}
+
+.decoration::before {
+    content: "";
+    display: inline-block;
+    background-color: rgba(254, 159, 107, 0.4);
+    width: 270px;
+    height: 39px;
+    position: absolute;
+    top: 48px;
+    left: -5px;
+    border-radius: 4px;
+    z-index: -1;
+
+    @media (max-width: 1024px) {
+        width: 230px;
+        height: 29px;
+        left: 0;
+        top: 45px;
+    }
+
+    @media (max-width: 768px) {
+        width: 183px;
+        height: 23px;
+        left: 0;
+        top: 35px;
+    }
+}
+
+main {
+    @media (max-width: 1024px) {
+        padding: 48px 32px 0 32px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 48px 16px 0 16px;
+    }
+}
+
+.hero-banner {
+    background-image: url("../../../public/assets/images/pattern-squiggle-1.svg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+}
+
+.hero-banner__wrapper {
+    padding-block-end: 96px;
+    max-width: 1192px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        text-align: start;
+        padding-block-end: 0;
+    }
+}
+
+.hero-banner__title {
+    margin: 96px auto 12px auto;
+    /* font-size: 64px; */
+    line-height: 1.1;
+    letter-spacing: -2px;
+    width: fit-content;
+    /* background: $clr-orange-500 url("https://www.airstarkennels.com/images/m-main-background.webp") left bottom/100px 100px no-repeat;
+    background-color: $clr-orange-500;
+    background-position: top left;
+    background-size: 100px;
+    background-repeat: no-repeat; */
+    font-size: 72px;
+    font-weight: 800;
+
+    @media (max-width: 1024px) {
+        font-size: 64px;
+        letter-spacing: -2px;
+        line-height: 1.1;
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 52px;
+        letter-spacing: -2px;
+        line-height: 1.1;
+        margin: 0;
+    }
+}
+
+.hero-banner__description {
+    margin-block-end: 40px;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+
+    @media (max-width: 1024px) {
+        text-align: start;
+    }
+}
+
+.hero-banner__btn {
+    margin-block-end: 80px;
+    font-size: 20px;
+    letter-spacing: 1.4;
+    letter-spacing: -0.5px;
+    padding: 16px 32px;
+
+    @media (max-width: 1024px) {
+        margin-inline-start: 0;
+    }
+
+    @media (max-width: 768px) {
+        margin-block-end: 40px;
+    }
+}
+
+.features-banner {
+    padding-block-start: 64px;
+}
+
+.features-section-title {
+    margin-block-end: 48px;
+    font-size: 48px;
+    line-height: 1.2;
+    letter-spacing: -2px;
+    font-weight: 800;
+
+    @media (max-width: 768px) {
+        text-align: start;
+        font-size: 40px;
+        margin-block: 0 32px;
+    }
+}
+
+.features-banner__wrapper {
+    max-width: 1192px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    text-align: start;
+    padding-bottom: 96px;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: 100%;
+        padding-block-end: 0;
+    }
+}
+
+.features-banner__wrapper h3 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -1px;
+
+    @media (max-width: 768px) {
+        margin-block-start: 20px;
+    }
+}
+
+.features-banner__wrapper p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.4px;
+
+    @media (max-width: 768px) {
+        margin-block-start: 12px;
+    }
 }

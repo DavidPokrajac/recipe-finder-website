@@ -11,11 +11,31 @@
     background-repeat: no-repeat, no-repeat;
     background-position: -73px 23px, 924px 24px;
     background-size: contain, contain;
+
+    @media (max-width: 1024px) {
+        padding-block: 80px;
+        margin-block-start: 80px;
+    }
+
+    @media (max-width: 768px) {
+        background-image: none;
+        padding: 48px 16px;
+        margin-block-start: 64px;
+    }
 }
 
 .cta-banner__title {
     margin-block-end: $spacing-150;
     font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -3%;
+
+    @media (max-width: 768px) {
+        font-size: 40px;
+        line-height: 1.2;
+        letter-spacing: -2px;
+        margin: 0;
+    }
 }
 
 p {
@@ -28,4 +48,9 @@ p {
     margin-block-start: $spacing-500;
     font-size: 18px;
     padding: 16px 24px;
+
+    @media (max-width: 768px) {
+        margin-block-start: 32px;
+        line-height: 1.4;
+    }
 }
