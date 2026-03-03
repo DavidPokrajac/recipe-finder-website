@@ -1,58 +1,128 @@
-<main>
+<main class="main">
   <section class="recipes-intro-banner">
     <h1>Explore our simple, healthy recipes</h1>
     <p>
-      Discover eight quick, whole-food dishes that fit real-life 
-      schedules and taste amazing. Use the search bar to find a 
-      recipe by name or ingredient, or simply scroll the list and 
-      let something delicious catch your eye.
+      Discover eight quick, whole-food dishes that fit real-life schedules and
+      taste amazing. Use the search bar to find a recipe by name or ingredient,
+      or simply scroll the list and let something delicious catch your eye.
     </p>
   </section>
   <section class="sorting-section">
-    <button id="max-prep-btn" class="popover-btn" popovertarget="max-prep-popover" popovertargetaction="show">Max Prep Time <img src="assets/images/icon-chevron-down.svg" alt=""></button>
+    <button
+      id="max-prep-btn"
+      class="select-button"
+      popovertarget="max-prep-popover"
+      popovertargetaction="show"
+    >
+      Max Prep Time <img src="assets/images/icon-chevron-down.svg" alt="" />
+    </button>
     <div popover id="max-prep-popover">
       <label for="zero-mins">
-        <input type="radio" name="max-prep-time" id="zero-mins" value="0" (change)="handleMaxPrepTime($event)">
+        <input
+          type="radio"
+          name="max-prep-time"
+          id="zero-mins"
+          value="0"
+          (change)="handleMaxPrepTime($event)"
+        />
         0 minutes
       </label>
       <label for="five-mins">
-        <input type="radio" name="max-prep-time" id="five-mins" value="5" (change)="handleMaxPrepTime($event)">
+        <input
+          type="radio"
+          name="max-prep-time"
+          id="five-mins"
+          value="5"
+          (change)="handleMaxPrepTime($event)"
+        />
         5 minutes
       </label>
       <label for="ten-mins">
-        <input type="radio" name="max-prep-time" id="ten-mins" value="10" (change)="handleMaxPrepTime($event)">
+        <input
+          type="radio"
+          name="max-prep-time"
+          id="ten-mins"
+          value="10"
+          (change)="handleMaxPrepTime($event)"
+        />
         10 minutes
       </label>
       <button (click)="clearMaxPrepRadios()">Clear</button>
     </div>
-    <button id="max-cook-btn" class="popover-btn" popovertarget="max-cook-popover" popovertargetaction="show">Max Cook Time <img src="assets/images/icon-chevron-down.svg" alt=""></button>
+    <button
+      id="max-cook-btn"
+      class="select-button"
+      popovertarget="max-cook-popover"
+      popovertargetaction="show"
+    >
+      Max Cook Time <img src="assets/images/icon-chevron-down.svg" alt="" />
+    </button>
     <div popover id="max-cook-popover">
       <label for="zero-mins">
-        <input type="radio" name="max-cook-time" id="zero-mins" value="0" (change)="handleMaxCookTime($event)">
+        <input
+          type="radio"
+          name="max-cook-time"
+          id="zero-mins"
+          value="0"
+          (change)="handleMaxCookTime($event)"
+        />
         0 minutes
       </label>
       <label for="five-mins">
-        <input type="radio" name="max-cook-time" id="five-mins" value="5" (change)="handleMaxCookTime($event)">
+        <input
+          type="radio"
+          name="max-cook-time"
+          id="five-mins"
+          value="5"
+          (change)="handleMaxCookTime($event)"
+        />
         5 minutes
       </label>
       <label for="ten-mins">
-        <input type="radio" name="max-cook-time" id="ten-mins" value="10" (change)="handleMaxCookTime($event)">
+        <input
+          type="radio"
+          name="max-cook-time"
+          id="ten-mins"
+          value="10"
+          (change)="handleMaxCookTime($event)"
+        />
         10 minutes
       </label>
       <label for="fifteen-mins">
-        <input type="radio" name="max-cook-time" id="fifteen-mins" value="15" (change)="handleMaxCookTime($event)">
+        <input
+          type="radio"
+          name="max-cook-time"
+          id="fifteen-mins"
+          value="15"
+          (change)="handleMaxCookTime($event)"
+        />
         15 minutes
       </label>
       <label for="twenty-mins">
-        <input type="radio" name="max-cook-time" id="twenty-mins" value="20" (change)="handleMaxCookTime($event)">
+        <input
+          type="radio"
+          name="max-cook-time"
+          id="twenty-mins"
+          value="20"
+          (change)="handleMaxCookTime($event)"
+        />
         20 minutes
       </label>
       <button (click)="clearMaxCookRadios()">Clear</button>
     </div>
     <div class="search-container" tabindex="0">
-      <img src="assets/images/icon-search.svg" alt="" class="search-icon">
-      <input type="search" placeholder="Search by name or ingredient..." (input)="handleSearch($event)" />
+      <img src="assets/images/icon-search.svg" alt="" class="search-icon" />
+      <input
+        type="search"
+        placeholder="Search by name or ingredient..."
+        (input)="handleSearch($event)"
+      />
     </div>
   </section>
-  <app-all-recipes-list [maxPrepTime]="maxPrepTime()" [maxCookTime]="maxCookTime()" [searchName]="name()"></app-all-recipes-list>
+  <app-all-recipes-list
+    [maxPrepTime]="maxPrepTime()"
+    [maxCookTime]="maxCookTime()"
+    [searchName]="name()"
+  ></app-all-recipes-list>
 </main>
+<hr />

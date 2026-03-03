@@ -1,8 +1,7 @@
 <ul class="recipes-list">
-    @for (recipe of displa(); track recipe.id) {
-        <li>
-            <app-recipe-card [recipe]="recipe"></app-recipe-card>
-        </li>
-    }
+  @for (recipe of displa(); track recipe.id) {
+    <li>
+      <app-recipe-card [recipe]="recipe"></app-recipe-card>
+    </li>
+  }
 </ul>
-

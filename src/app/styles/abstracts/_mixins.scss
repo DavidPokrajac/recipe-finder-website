@@ -1,6 +1,6 @@
 @use "./variables" as *;
 
-@mixin btn-dark {
+/* @mixin btn-dark {
     background-color: $clr-neutral-900;
     color: $clr-neutral-0;
     padding: $spacing-150 $spacing-200;
@@ -16,4 +16,40 @@
         box-shadow: 0 0 0 3px $clr-neutral-0, 0 0 0 5px $clr-neutral-900;
         outline: none;
     }
+} */
+
+@mixin respond-to($media) {
+    @if $media == 'small' {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $media == 'medium' {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+    @else if $media == 'large' {
+        @media (max-width: 1120px) {
+            @content;
+        }
+    }
+    @else if $media == '2-xl' {
+        @media (max-width: 1225px) {
+            @content;
+        }
+    }
+    @else if $media == '3-xl' {
+        @media (max-width: 1300px) {
+            @content;
+        }
+    }
 }
+
+@mixin typographyMixin($fontSize, $fontWeight, $lineHeight, $letterSpacing) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
+}
+

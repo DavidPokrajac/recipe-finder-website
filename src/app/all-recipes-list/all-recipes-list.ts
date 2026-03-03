@@ -37,12 +37,13 @@ export class AllRecipesList implements OnInit {
       this.recipes.set(data);
     });
   }
+
   displa = () => {
     let recipesCopy = [...this.recipes()];
     if(this.searchName()) {
       return recipesCopy.filter((r: RecipeType) => {
         return (r.cookMinutes === this.maxCookTime()) || (r.title.includes(this.searchName() as string) || r.title.toLowerCase().includes(this.searchName() as string))
-      })
+      });
     }
     else if(this.maxCookTime() || this.maxCookTime() === 0) {
       return recipesCopy.filter((r: RecipeType) => {

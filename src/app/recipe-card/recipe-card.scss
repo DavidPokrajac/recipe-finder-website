@@ -1,65 +1,52 @@
-article {
-    background-color: rgb(255, 255, 255);
-    padding: 8px;
-    border-radius: 10px;
-    text-align: start;
-    height: 100%;
-    border: 1px solid rgb(208, 220, 217);
-    box-shadow: 0 8px 16px -9px rgba(22, 58, 52, 0.16);
-}
+@use "../styles/abstracts/variables" as *;
+@use "../styles/abstracts/placeholders" as *;
+@use "../styles/abstracts/mixins" as *;
 
 img {
-    border-radius: 10px;
+    border-radius: $radius-10;
 }
 
 .text-content {
-    padding-inline: 8px;
-}
+    @include typographyMixin(16px, 500, 1.5, -0.3px);
 
-.text-content p {
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: -0.3px;
+    padding-inline: $spacing-100;
+    color: rgb(57, 88, 82);
 }
 
 h2 {
-    font-size: 20px;
-    color: rgb(22, 58, 52);
-    letter-spacing: -0.5px;
+    @include typographyMixin(20px, 700, 1.4, -0.5px);
+
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: clip;
 }
 
-p {
-    color: rgb(57, 88, 82);
-}
-
 .prep-details {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 16px;
-    row-gap: 8px;
-    margin-block-start: 16px;
-    color: rgb(22, 58, 52);
+    column-gap: $spacing-200;
+    row-gap: $spacing-100;
+    margin-block-start: $spacing-200;
+    letter-spacing: -2%;
+
+    @media (max-width: 1024px) {
+        letter-spacing: -0.3px;
+    }
 }
 
 .icon {
     display: inline-block;
     vertical-align: sub;
-    margin-inline-end: 6px;
+    margin-inline-end: $spacing-075;
 }
 
 a {
+    @include typographyMixin(16px, 700, 1.5, -0.3px);
+
+    @extend %btn-dark;
     display: block;
-    width: 100%;
-    padding: 12px 32px;
-    border-radius: 100vw;
-    margin-block-start: 16px;
-    background-color: rgb(22, 58, 52);
-    color: rgb(255, 255, 255);
     text-align: center;
-    cursor: pointer;
+    margin-block-start: $spacing-200;
 }
 
 .recipe-card-image {

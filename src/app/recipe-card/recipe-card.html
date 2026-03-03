@@ -1,22 +1,28 @@
-<article>
-    <picture>
-        <source srcset="{{ recipe?.image?.large }}" media="min-width: 1024px;">
-        <img src="{{ recipe?.image?.small }}" alt="" class="recipe-card-image">
-    </picture>
-    <div class="text-content">
-        <h2>{{ recipe?.title }}</h2>
-        <p>{{ recipe?.overview }}</p>
-        <div class="prep-details">
-            <span>
-                <img class="icon" src="assets/images/icon-servings.svg" alt="" />Servings: {{ recipe?.servings }}
-            </span>
-            <span>
-                <img class="icon" src="assets/images/icon-prep-time.svg" alt="" />Prep: {{ recipe?.prepMinutes + " mins" }}
-            </span>
-            <span>
-                <img class="icon" src="assets/images/icon-cook-time.svg" alt="" />Cook: {{ recipe?.cookMinutes + " min" }}
-            </span>
-        </div>
+<article class="recipe-card">
+  <picture>
+    <source srcset="{{ recipe?.image?.large }}" media="min-width: 1024px;" />
+    <img src="{{ recipe?.image?.small }}" alt="" class="recipe-card-image" />
+  </picture>
+  <div class="text-content">
+    <h2>{{ recipe?.title }}</h2>
+    <p>{{ recipe?.overview }}</p>
+    <div class="prep-details">
+      <span>
+        <img
+          class="icon"
+          src="assets/images/icon-servings.svg"
+          alt=""
+        />Servings: {{ recipe?.servings }}
+      </span>
+      <span>
+        <img class="icon" src="assets/images/icon-prep-time.svg" alt="" />Prep:
+        {{ recipe?.prepMinutes + " mins" }}
+      </span>
+      <span>
+        <img class="icon" src="assets/images/icon-cook-time.svg" alt="" />Cook:
+        {{ recipe?.cookMinutes + " min" }}
+      </span>
     </div>
-    <a (click)="navigate(recipe?.id)">View Recipe</a>
+  </div>
+  <a (click)="navigate(recipe?.id)" class="main-btn rounded-full">View Recipe</a>
 </article>

@@ -1,25 +1,40 @@
-main {
-    max-width: 1192px;
-    margin: 0 auto;
-    /* padding-inline: 124px; */
-    overflow: clip;
-    border-bottom: 1px solid rgb(208, 220, 217);
+@use "../styles/abstracts/variables" as *;
+@use "../styles/abstracts/mixins" as *;
+
+.main {
+    margin-block-end: $spacing-1200;
+
+    @media (min-width: 1024px) and (max-width: 1250px) {
+        padding-inline: $spacing-400;
+    }
 
     @media (max-width: 1024px) {
-        padding-inline: 32px;
+        margin-block-end: $spacing-0;
+        padding-inline: $spacing-400;
     }
 
     @media (max-width: 768px) {
-        padding-inline: 16px;
+        padding-inline: $spacing-200;
+    }
+}
+
+.main > * {
+    grid-column: 1 / -1;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid $clr-neutral-300;
+
+    @media (max-width: 1024px) {
+        border-top: none;
     }
 }
 
 h1 {
-    font-size: 48px;
-    font-weight: 800;
-    margin: 0;
-    line-height: 1.2;
-    letter-spacing: -2px;
+    @include typographyMixin(48px, 800, 1.2, -2px);
+    
+    margin: $spacing-0;
 
     @media (max-width: 768px) {
         font-size: 40px;
@@ -27,93 +42,82 @@ h1 {
 }
 
 p {
-    margin: 0;
+    @include typographyMixin(20px, 500, 1.5, -2%);
+    
+    margin: $spacing-0;
 
-    @media (max-width: 768px) {
-        font-size: 20px;
+    @media (max-width: 1024px) {
         letter-spacing: -0.4px;
-        line-height: 1.5;
     }
 }
 
 .recipes-intro-banner {
-    /* max-width: 1192px; */
     display: flex;
     flex-direction: column;
-    margin-block-start: 80px;
-    margin-block-end: 64px;
-    gap: 12px;
+    margin-block-start: $spacing-1000;
+    margin-block-end: $spacing-800;
+    gap: $spacing-150;
 
     @media (max-width: 1024px) {
         text-align: start;
     }
 
     @media (max-width: 768px) {
-        margin-block: 48px;
-        gap: 12px;
+        margin-block: $spacing-600;
     }
 }
 
 .sorting-section {
     display: flex;
-    gap: 16px;
+    gap: $spacing-200;
 
     @media (max-width: 768px) {
         flex-direction: column;
-        gap: 12px;
+        gap: $spacing-150;
     }
 }
 
-.popover-btn {
+.select-button {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 16px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(22, 58, 52);
-    border-radius: 10px;
-    border: 1px solid rgb(208, 220, 217);
-    font-size: 18px;
-    line-height: 1.5;
-    letter-spacing: -0.3px;
-    cursor: pointer;
+    gap: $spacing-100;
 
     @media(max-width: 768px) {
         justify-content: center;
     }
 }
 
-.popover-btn:hover:not(:focus-within) {
+.select-button:hover:not(:focus-within) {
     border-color: currentColor;
 }
 
-.popover-btn:focus-within {
+.select-button:focus-within {
     box-shadow: 0 0 0 2px rgb(255, 255, 255), 0 0 0 4px rgb(22, 58, 52);
     outline: none;
     border-color: none;
 }
 
-.popover-btn:first-of-type {
+.select-button:first-of-type {
     grid-column: 1 / span 2;
 }
 
-.popover-btn:last-of-type {
+.select-button:last-of-type {
     grid-column: 3 / span 2;
 }
 
 .search-container {
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(208, 220, 217);
-    border-radius: 10px;
-    padding: 10px 16px;
+    border-radius: $radius-10;
+    padding: $spacing-125 $spacing-200;
     display: flex;
-    gap: 8px;
+    gap: $spacing-100;
     width: 310px;
     margin-inline-start: auto;
     cursor: pointer;
 
     @media (max-width: 768px) {
-        margin-inline-start: 0;
+        margin-inline-start: $spacing-0;
         width: 100%;
     }
 }
@@ -134,14 +138,10 @@ p {
 }
 
 input[type="search"] {
-    /* display: inline-block; */
-    /* width: 310px; */
-    /* padding: 10px 16px; */
+    @include typographyMixin(18px, 600, 1.5, -0.3px);
+
     border: none;
     flex-grow: 1;
-    font-size: 18px;
-    line-height: 1.5;
-    letter-spacing: -0.3px;
     color: rgb(22, 58, 52);
     cursor: inherit;
 }
@@ -165,13 +165,10 @@ input[type="search"]::placeholder {
 #max-prep-popover,
 #max-cook-popover {
     position: absolute;
-    margin: 0;
-    /* display: flex;
-    flex-direction: column;
-    align-items: start; */
-    padding: 8px;
+    margin: $spacing-0;
+    padding: $spacing-100;
     border: 1px solid rgb(208, 220, 217);
-    border-radius: 8px;
+    border-radius: $radius-8;
     width: 240px;
     box-shadow: 0 12px 22px -12px rgb(208, 220, 217);
 }
@@ -189,56 +186,24 @@ input[type="search"]::placeholder {
 }
 
 div[popover] > * {
-    padding: 8px;
-    font-size: 18px;
-    line-height: 1.5;
-    letter-spacing: -0.3px;
+    @include typographyMixin(18px, 500, 1.5, 0%);
+    
+    padding: $spacing-100;
     display: block;
     text-align: start;
 }
 
 div[popover] > button {
+    @include typographyMixin(16px, 500, 1.5, -0.3px);
+
     background-color: transparent;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: -0.3px;
-    padding-block: 2px;
+    padding-block: $spacing-025;
 }
 
 input[type="radio"] {
-    margin: 0 8px 0 0;
+    margin: $spacing-0 $spacing-100 $spacing-0 $spacing-0;
     accent-color: rgb(22, 58, 52);
-    /* transform: scale(1.143); */
-    /* border: 2px solid rgb(22, 58, 52); */
     display: inline-block;
     width: 16px;
     height: 16px;
 }
-
-label {
-    position: relative;
-}
-
-/* label::before {
-    content: "";
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    border-radius: 100%;
-    position: absolute;
-    top: 12px;
-    border: 1px solid rgb(208, 220, 217);
-    z-index: 2;
-    box-shadow: 0 1px 2px 0 rgba(22, 58, 52, 0.12);
-    cursor: pointer;
-} */
-
-/* label:hover::before {
-    border: 1px solid #e9ede8;
-}
-
-label:focus-visible::before {
-    outline: none;
-    border: 1px solid rgb(208, 220, 217);
-    box-shadow: 0 0 0 2px rgb(255, 255, 255), 0 0 0 4px #e9ede8;
-} */

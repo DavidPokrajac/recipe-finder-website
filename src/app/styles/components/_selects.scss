@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.select-button {
+    @include typographyMixin(18px, 600, 1.5, -0.3px);
+
+    padding: $spacing-125 $spacing-200;
+    background-color: $clr-neutral-0;
+    color: rgb(22, 58, 52);
+    border-radius: $radius-10;
+    border: 1px solid $clr-neutral-300;
+    cursor: pointer;
+}

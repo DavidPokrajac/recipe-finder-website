@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(12, 70px);
+    column-gap: $spacing-400;
+    justify-content: center;
+}
+
+@include respond-to('2-xl') {
+    .main {
+        grid-template-columns: repeat(8, 100px);
+    }
+}
+
+@include respond-to('medium') {
+    .main {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: $spacing-300;
+    }
+}
+
+@include respond-to('small') {
+    .main {
+        display: block;
+        padding: $spacing-0;
+    }
+}

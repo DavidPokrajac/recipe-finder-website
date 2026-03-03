@@ -1,4 +1,5 @@
 @use "../abstracts/_variables" as *;
+@use "../abstracts/mixins" as *;
 
 .header {
     display: flex;
@@ -7,11 +8,11 @@
     border-block-end: 1px solid $clr-neutral-300;
 
     @media (max-width: 1024px) {
-        padding: 32px 32px 20px 32px;
+        padding: $spacing-400 $spacing-400 $spacing-250 $spacing-400;
     }
 
     @media (max-width: 768px) {
-        padding: 16px;
+        padding: $spacing-200;
     }
 }
 
@@ -22,12 +23,15 @@
 .header__navigation__nav-items-list {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: $spacing-500;
 }
 
 .header__navigation__nav-link {
-    font-size: 18px;
-    line-height: 1.5;
-    letter-spacing: -0.3px;
+    @include typographyMixin(18px, 600, 1.5, -0.3px);
+
     color: $clr-neutral-900;
+}
+
+.header button {
+    @include typographyMixin(20, 700, 1.4, -0.5px);
 }

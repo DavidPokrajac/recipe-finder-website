@@ -1,41 +1,55 @@
 <main>
-<section>
+  <section>
     <ul class="breadcrumb-wrapper">
-        @for(breadcrumb of updatedBreadcrumbs(); track breadcrumb) {
-            <li>{{ breadcrumb }}</li>
-        }
+      @for (breadcrumb of updatedBreadcrumbs(); track breadcrumb) {
+        <li>{{ breadcrumb }}</li>
+      }
     </ul>
     <article>
-        <picture>
-            <source [srcset]="recipeId()?.image?.large" media="min-width: 1024px;">
-            <img [src]="recipeId()?.image?.small" alt="" class="recipe-card-image">
-        </picture>
-        <div class="text-content">
-            <h1>{{ recipeId()?.title }}</h1>
-            <p>{{ recipeId()?.overview }}</p>
-            <p>
-                <span><img src="assets/images/icon-servings.svg" />Servings: {{ recipeId()?.servings }}</span>
-                <span><img src="assets/images/icon-prep-time.svg" />Prep: {{ recipeId()?.prepMinutes }} mins</span>
-                <span><img src="assets/images/icon-cook-time.svg" />Cook: {{ recipeId()?.cookMinutes }} mins</span>
-            </p>
-            <h2>Ingredients:</h2>
-            <ul class="ingredients-ul">
-                @for(ingredient of recipeId()?.ingredients; track ingredient) {
-                    <li>{{ ingredient }}</li>
-                }
-            </ul>
-            <h2>Instructions:</h2>
-            <ul class="instructions-ul">
-                @for(instruction of recipeId()?.instructions; track instruction) {
-                    <li>{{ instruction }}</li>
-                }
-            </ul>
-        </div>
+      <picture>
+        <source [srcset]="recipeId()?.image?.large" media="min-width: 768px;" />
+        <img
+          [src]="recipeId()?.image?.small"
+          alt=""
+          class="recipe-card-image"
+        />
+      </picture>
+      <div class="text-content">
+        <h1>{{ recipeId()?.title }}</h1>
+        <p>{{ recipeId()?.overview }}</p>
+        <p>
+          <span
+            ><img src="assets/images/icon-servings.svg" />Servings:
+            {{ recipeId()?.servings }}</span
+          >
+          <span
+            ><img src="assets/images/icon-prep-time.svg" />Prep:
+            {{ recipeId()?.prepMinutes }} mins</span
+          >
+          <span
+            ><img src="assets/images/icon-cook-time.svg" />Cook:
+            {{ recipeId()?.cookMinutes }} mins</span
+          >
+        </p>
+        <h2>Ingredients:</h2>
+        <ul class="ingredients-ul">
+          @for (ingredient of recipeId()?.ingredients; track ingredient) {
+            <li>{{ ingredient }}</li>
+          }
+        </ul>
+        <h2>Instructions:</h2>
+        <ul class="instructions-ul">
+          @for (instruction of recipeId()?.instructions; track instruction) {
+            <li>{{ instruction }}</li>
+          }
+        </ul>
+      </div>
     </article>
-</section>
-<hr />
-<section class="more-recipes-section">
+  </section>
+  <hr />
+  <section class="more-recipes-section">
     <h2>More Recipes</h2>
     <app-recipes-list [id]="recipeId()?.id"></app-recipes-list>
-</section>
+  </section>
 </main>
+<hr class="last-hr" />

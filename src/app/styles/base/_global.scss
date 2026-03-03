@@ -28,11 +28,16 @@ button {
 }
 
 main {
-    /* max-width: 1192px; */
-    margin: 0 auto;
+    margin: $spacing-0 auto;
     text-align: center;
 }
 
+@media (max-width: 1024px) {
+    main {
+        text-align: start;
+    }
+}
+
 ul {
-    padding: 0;
+    padding: $spacing-0;
 } 

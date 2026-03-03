@@ -12,13 +12,25 @@
 }
 
 .margin-center {
-    margin: 0 auto;
+    margin: $spacing-0 auto;
 }
 
 .large {
     padding: $spacing-200 $spacing-400;
 }
 
+.medium {
+    padding: $spacing-200 $spacing-300;
+}
+
+.regular {
+    padding: $spacing-150 $spacing-200;
+}
+
 .text-highlight {
     background-color: $clr-orange-500;
+}
+
+.rounded-full {
+    border-radius: 100vw !important;
 }

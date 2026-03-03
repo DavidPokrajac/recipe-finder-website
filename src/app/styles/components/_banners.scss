@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.cta-banner {
+    @include typographyMixin(20px, 500, 1.5, -0.4px);
+
+    grid-column: 1 / 13;
+    grid-row: 4 / 5;
+    text-align: center;
+    padding-block: $spacing-1200;
+    border-radius: $radius-16;
+    background-color: $clr-neutral-200;
+    background-image: url("../../../../public/assets/images/pattern-fork.svg"), url("../../../../public/assets/images/pattern-knife.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: -73px 23px, 924px 24px;
+    background-size: contain, 340px 340px;
+    font-size: 20px;
+
+    @media (max-width: 768px) {
+        background-image: none;
+        padding: $spacing-600 $spacing-200;
+        margin-block-start: $spacing-800;
+    }
+
+    @media (max-width: 1300px) {
+        grid-column: 1 / 9;
+        background-position: -73px 23px, 750px -100px;
+    }
+
+    @media (max-width: 1024px) {
+        padding-block: $spacing-1000;
+        margin-block-start: $spacing-1000;
+        grid-column: 1 / 5;
+        background-size: 179px 231px, 172px 172px;
+        background-position: -48px 182px, 700px -50px;
+    }
+
+    @media (max-width: 768px) {
+        margin-block-start: $spacing-800;
+        margin-inline: $spacing-200;
+        padding-block: $spacing-600;
+        padding-inline: $spacing-200;
+    }
+}
+
+.cta-banner__title {
+    @include typographyMixin(48px, 800, normal, -3%);
+
+    margin-block-end: $spacing-150;
+
+    @media (max-width: 768px) {
+        @include typographyMixin(40px, 800, 1.2, -2px);
+
+        margin: $spacing-0;
+    }
+}
+
+.cta-banner__btn {
+    @include typographyMixin(18px, 700, 1.4, 0px);
+
+    margin-block-start: $spacing-500;
+
+    @media (max-width: 768px) {
+        margin-block-start: $spacing-400;
+    }
+}

@@ -1,5 +1,5 @@
-@use "../abstracts/_mixins" as *;
+@use "../abstracts/placeholders" as *;
 
 .main-btn {
-    @include btn-dark;
+    @extend %btn-dark;
 }

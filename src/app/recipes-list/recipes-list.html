@@ -1,7 +1,7 @@
 <ul class="recipes-list">
-    @for (recipe of displayData(); track $index) {
-        <li>
-            <app-recipe-card [recipe]="recipe"></app-recipe-card>
-        </li>
-    }
+  @for (recipe of displayData(); track $index) {
+    <li>
+      <app-recipe-card [recipe]="recipe"></app-recipe-card>
+    </li>
+  }
 </ul>
