@@ -1,12 +1,12 @@
-<article class="recipe-card">
+<article class="recipe-card rounded-10 gray-border card-shadow">
   <picture>
     <source srcset="{{ recipe?.image?.large }}" media="min-width: 1024px;" />
-    <img src="{{ recipe?.image?.small }}" alt="" class="recipe-card-image" />
+    <img src="{{ recipe?.image?.small }}" alt="" class="recipe-card__image rounded-10" />
   </picture>
-  <div class="text-content">
-    <h2>{{ recipe?.title }}</h2>
+  <div class="recipe-card__text">
+    <h2 class="recipe-card__text-title">{{ recipe?.title }}</h2>
     <p>{{ recipe?.overview }}</p>
-    <div class="prep-details">
+    <div class="recipe-card__prep-details">
       <span>
         <img
           class="icon"
@@ -24,5 +24,5 @@
       </span>
     </div>
   </div>
-  <a (click)="navigate(recipe?.id)" class="main-btn rounded-full">View Recipe</a>
+  <a (click)="navigate(recipe?.id)" class="recipe-card__link main-btn rounded-full">View Recipe</a>
 </article>

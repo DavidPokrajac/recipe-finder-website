@@ -16,18 +16,12 @@
     background-size: contain, 340px 340px;
     font-size: 20px;
 
-    @media (max-width: 768px) {
-        background-image: none;
-        padding: $spacing-600 $spacing-200;
-        margin-block-start: $spacing-800;
-    }
-
-    @media (max-width: 1300px) {
+    @include respond-to('3-xl') {
         grid-column: 1 / 9;
         background-position: -73px 23px, 750px -100px;
     }
 
-    @media (max-width: 1024px) {
+    @include respond-to('medium') {
         padding-block: $spacing-1000;
         margin-block-start: $spacing-1000;
         grid-column: 1 / 5;
@@ -35,11 +29,11 @@
         background-position: -48px 182px, 700px -50px;
     }
 
-    @media (max-width: 768px) {
+    @include respond-to('small') {
+        background-image: none;
         margin-block-start: $spacing-800;
         margin-inline: $spacing-200;
-        padding-block: $spacing-600;
-        padding-inline: $spacing-200;
+        padding: $spacing-600 $spacing-200;
     }
 }
 
@@ -48,7 +42,7 @@
 
     margin-block-end: $spacing-150;
 
-    @media (max-width: 768px) {
+    @include respond-to('small') {
         @include typographyMixin(40px, 800, 1.2, -2px);
 
         margin: $spacing-0;
@@ -60,7 +54,7 @@
 
     margin-block-start: $spacing-500;
 
-    @media (max-width: 768px) {
+    @include respond-to('small') {
         margin-block-start: $spacing-400;
     }
 }
